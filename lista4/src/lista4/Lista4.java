@@ -96,6 +96,50 @@ public class Lista4 {
                 vetor = vetorProduto(vetorA, vetorB);
                 System.out.println("");
                 break;
+            case 10:
+                System.out.print("Informe o tamanho do vetor: ");
+                t1=sc.nextInt();
+                System.out.printf("Informe o multiplicador: ");
+                nD = sc.nextDouble();
+                vetorD = criaVetorDouble(t1);
+                vetorD = populaVetorDouble(vetorD);
+                produtoVetorImpar(vetorD, nD);
+                System.out.println("");
+                break;
+            case 11:
+                System.out.print("Informe o tamanho do vetor: ");
+                t1=sc.nextInt();
+                vetorD = criaVetorDouble(t1);
+                vetorD = populaVetorDouble(vetorD);
+                maiorQueMediaPar(vetorD);
+                break;
+            case  12:
+                System.out.print("Informe o tamanho do vetor: ");
+                t1=sc.nextInt();
+                vetorA = criaVetor(t1);
+                vetorB = criaVetor(t1);
+                vetorA = populaVetorRandom(vetorA);
+                vetorB = populaVetorRandom(vetorB);
+                maiorSomaMaiorMedia(vetorA, vetorB);
+                break;
+            case 13:
+                /*System.out.print("Informe o tamanho dos vetores: ");
+                t1=sc.nextInt();
+                vetorA = criaVetor(t1);
+                vetorB = criaVetor(t1);
+                vetor = criaVetor(t1*2);
+                System.out.println("Valores para o vetorA");
+                vetorA = populaVetor(vetorA);
+                System.out.println("Valores para o vetorB");
+                vetorB = populaVetor(vetorB);
+
+                vetor = novoVetor(vetorA, vetorB);
+                
+                System.out.println("humm");
+                break;*/
+            case 14:
+                
+                break;
         }
 
     }

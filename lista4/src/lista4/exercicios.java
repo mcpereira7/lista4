@@ -119,5 +119,60 @@ return resultado;
         }
         return vetor;
     }
+    
+    // Exercício 10
+    static void produtoVetorImpar(double [] vetor, double nD){
+        for (int i=0; i<vetor.length; i++){
+            if (i%2!=0){
+                System.out.printf("\n%.2f na posição %d multiplicado por %.2f é igual a %.2f", vetor[i], i,nD, (vetor[i]*nD));
+            }
+        }
+    }
+    
+    // Exercício 11
+    static void maiorQueMediaPar(double [] vetor){
+        double media, cont=0, soma=0;
+        for(int i=0; i<vetor.length; i++){
+            if(i%2==0){
+                soma=soma + vetor[i];
+                cont++;
+            }
+        }
+        media=soma/cont;
+        System.out.println("A média dos valores nas posições par é: "+media);
+        for(int i =0; i<vetor.length; i++){
+            if(vetor[i]>media){
+                System.out.println(vetor[i]+" é maior que a média");
+            }
+        }
+    }
 
+    // Exercício 12
+    static void maiorSomaMaiorMedia(int [] vetorA, int [] vetorB){
+        int somaA=0, mediaA, somaB=0, mediaB;
+        for(int i = 0; i<vetorA.length; i++){
+            somaA = somaA+vetorA[i];
+            somaB = somaB+vetorB[i];
+        }
+        mediaB=(somaB/vetorB.length);
+        mediaA=(somaA/vetorA.length);
+        if(somaA>somaB || mediaA>mediaB){
+            System.out.printf("VetorA tem a maior soma %d e a maior média %d \n", somaA, mediaA);
+        }else{
+            System.out.printf("VetorB tem a maior soma %d e a maior média %d \n", somaB, mediaB);
+        }
+    }
+    
+    // Exercício 13
+    static int [] novoVetor(int [] vetorA, int [] vetorB){
+        int [] vetorC = new int[vetorA.length*2];
+        int cont=vetorC.length;
+        for(int i = 0; i<vetorC.length; i++){
+            vetorC[i]=vetorA[i];
+            vetorC[cont]=vetorB[i];
+                    cont--;
+        }
+        
+        return vetorC;
+    }
 }
